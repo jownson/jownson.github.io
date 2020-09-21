@@ -138,6 +138,7 @@
         var msgLength = msg.substring(0,2);
         var msgType = msg.substring(2,4);
         msg = msg.substring(4);//截取报文类型及报文长度
+        msgType = msgType.toLowerCase();
         if (msgType == "20") {
             msgType = "设备基本信息 ID = 0x20";
             resultMsg += "报文长度：" + parseInt(msgLength, 16) + "\r\n";//报文长度
