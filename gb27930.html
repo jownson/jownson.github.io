@@ -13,35 +13,39 @@
 <body style="background-color: #fff;font-size: 14px;line-height: 1.428;">
 <form role="form">
     <div class="container" style="margin-top: 5px;">
-
         <div class="row">
             <div class="col-md-12 input-group">
-                <span class="input-group-addon">帧  ID：</span>
-                <input type="text" class="form-control" id="framID" style="width: 50%" />
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12 input-group">				
-				<span class="input-group-addon">帧数据：</span>
-                <textarea class="form-control" id="analysisResult" rows="10"></textarea>
-            </div>
-        </div>
-
-		<div class="row">
-            <div class="col-md-12 input-group">								
+                <span class="input-group-addon">帧 ID</span>
+				<select type="text" class="form-control" id="analysisMsg" style="width: 100%">
+  					<option value ="06">BCP_06____动力蓄电池充电参数</option>
+					<option value ="08">CML_08____充电机最大输出能力</option>
+					<option value ="10">BCL_10____电池充电需求</option>
+					<option value ="11">BCS_11____电池充电总状态</option>
+					<option value ="13">BSM_13____BMS发送动力蓄电池状态信息报文</option>
+					<option value ="19">BST_19____BMS中止充电</option>
+  					<option value ="1A">CST_1A____充电机中止充电</option>  					
+  					<option value ="1C">BSD_1C____BMS统计数据报文</option>
+					<option value ="1D">CSD_1D____充电机统计数据报文</option>
+					<option value ="1E">BEM_1E____BMS错误报文</option>
+					<option value ="1F">CEM_1F____充电机错误报文</option>
+				</select>
                 <span class="input-group-btn">
                     <button id="analysisMsgBtn" type="button" class="btn btn-default">解析</button>
                 </span>
             </div>
         </div>
-
         <div class="row" style="margin-top: 10px">
             <div class="col-md-12">
-                <textarea class="form-control" id="analysisResult" rows="28"></textarea>
+                <textarea class="form-control" id="inputData" rows="10"></textarea>
+            </div>
+        </div>
+		<div class="row" style="margin-top: 10px">
+            <div class="col-md-12">
+                <textarea class="form-control" id="analysisResult" rows="20" readonly="readonly"></textarea>
             </div>
         </div>
     </div>
+
 
 <script type="text/javascript">
     //解析报文开始
